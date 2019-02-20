@@ -1,6 +1,8 @@
-import 'jquery'
+import {$,jQuery} from 'jquery';
+window.$ = $;
+window.jQuery = jQuery;
 
-fucntion init() {
+function init() {
 	class NeighboursVisualization
 	{
 		constructor()

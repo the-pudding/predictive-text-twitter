@@ -1,12 +1,21 @@
 /* global d3 */
-import 'jquery'
+import {$,jQuery} from 'jquery';
+window.$ = $;
+window.jQuery = jQuery;
+
 import debounce from 'lodash.debounce';
 import isMobile from './utils/is-mobile';
 import graphic from './graphic';
 import eval_scores from './eval_scores_per_language_model';
+import eval_viz from './eval_visualization';
 import example_tweets from './example_tweets';
+import models_viz from './models_visualization';
 import nearest_neighbours from './nearest_neighbours';
 import neighbours_viz from './neighbours_visualization';
+import predictions from './predictions_per_language_model.js'
+import scores from './scores_per_tweet.js'
+import sociolect_scores from './sociolect_scores_per_language_model.js'
+import sociolect_viz from './sociolect_visualization.js'
 
 const $body = d3.select('body');
 let previousWidth = 0;
@@ -44,9 +53,15 @@ function init() {
 	// kick off graphic code
 	graphic.init();
 	eval_scores.init();
+	//eval_viz.init();
 	example_tweets.init();
+	//models_viz.init();
 	nearest_neighbours.init();
-	neighbours_viz.init();
+	//neighbours_viz.init();
+	predictions.init();
+	scores.init();
+	sociolect_scores.init();
+	//sociolect_viz.init();
 }
 
 init();
