@@ -1,0 +1,261 @@
+/* CUSTOM STORY STYLE */
+@css {
+		.visualization
+	{
+		font-family: 'Montserrat', sans-serif;
+	    width: 600px;
+	    background-color: white;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		margin: auto;
+		margin-top:75px;
+	}
+
+	.visualization_section
+	{
+		padding: 30px;
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	}
+
+	.profile_picture
+	{
+		border-radius: 50%;
+		width: 100px;
+		margin: 10px;
+	}
+
+	.user_select, .model_select
+	{
+		filter: grayscale(100%) brightness(75%);
+		cursor: pointer;
+	}
+
+	.user_select:hover, .model_select:hover
+	{
+		filter: grayscale(0%);
+	}
+
+	.predictor_picture
+	{
+	    width: 65px;
+	    margin: 1px;
+	    margin-left: 9px;
+	}
+
+	img.selected
+	{
+		filter: grayscale(0%);
+	}
+
+	a.selected
+	{
+		color: hsl(200, 80%, 53%);
+	}
+
+	.visualization_section:nth-child(odd)
+	{
+		background-color: hsl(0, 0%, 96%);
+	}
+
+	.section_title
+	{
+		text-transform: uppercase;
+		color: hsla(0, 0%, 0%, 0.4);
+		margin: 15px;
+		margin-bottom: 5px;
+		font-size: 14px;
+	}
+
+	.percentage_explanation
+	{
+		text-align: center;
+		text-transform: uppercase;
+		color: hsla(0, 0%, 0%, 0.4);
+	}
+
+	.predictor_name
+	{
+		color: hsla(0, 0%, 0%, 0.4);
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+
+	.predicted_text
+	{
+		font-size: 20px;
+		margin-top: 8px;
+	}
+
+	.bar
+	{
+		background-color: hsl(203, 43%, 76%);
+		height: 20px;
+		border-radius: 10px;
+		float: left;
+		margin-right: 10px;
+
+	}
+
+	.bar_column
+	{
+		width: 300px;
+	}
+
+	.tweet_select
+	{
+		font-size: 40px;
+		cursor: pointer;
+		margin:15px;
+		color: hsla(0, 0%, 0%, 0.2);
+	}
+
+	.tweet_select_area
+	{
+		margin-top: -10px;
+	}
+
+	.predicted_tweet_percentage
+	{
+		color: hsl(200, 80%, 53%);
+		margin: auto;
+		margin-bottom: -15px;
+		font-size: 60px;
+		width: 160px;
+		text-align: center;
+	}
+
+	.slider_area
+	{
+		width: 440px;
+		margin: auto;
+	}
+
+	.neighbours_section table
+	{
+	    font-size: 25px;
+	    color: hsla(0, 0%, 0%, 0.6509803921568628);
+	    padding: 15px;
+	}
+
+	.neighbours_section td
+	{
+		padding: 10px;
+	}
+
+	#neighbours_progress_slider, #models_progress_slider
+	{
+		width: 400px;
+		float: left;
+	}
+
+	#neighbours_progress_slider, #models_progress_slider
+	{
+	   -webkit-appearance: none;
+	    margin-left: 9px;
+	}
+
+	#neighbours_progress_slider::-webkit-slider-runnable-track, #models_progress_slider::-webkit-slider-runnable-track
+	{
+		background-color: hsla(0,0%,0%,0.05);
+		border-radius: 10px;
+		height: 10px;
+		margin-top:3px;
+	}
+
+	#neighbours_progress_slider::-webkit-slider-thumb, #models_progress_slider::-webkit-slider-thumb
+	{
+	    -webkit-appearance: none;
+	    appearance: none;
+	    background-color: hsl(203, 43%, 76%);
+	    border: none;
+	    cursor: pointer;
+	    width: 20px;
+	    height: 20px;
+	    border-radius: 20px;
+	    margin-top:-4px;
+	}
+
+	#neighbours_progress_slider:focus, #models_progress_slider:focus
+	{
+	   outline: none;
+	}
+
+	#neighbours_progress_slider::-moz-range-thumb, #models_progress_slider::-moz-range-thumb
+	{
+	    -webkit-appearance: none;
+	    appearance: none;
+	    background-color: hsl(203, 43%, 76%);
+	    border: none;
+	    cursor: pointer;
+	    width: 20px;
+	    height: 20px;
+	    border-radius: 20px;
+	}
+
+	#neighbours_progress_slider::-moz-range-track, #models_progress_slider::-moz-range-track
+	{
+		background-color: hsla(0,0%,0%,0.05);
+		border-radius: 10px;
+		height: 10px;
+	}
+
+	.arrow_left, .arrow_right
+	{
+	  width: 0;
+	  height: 0;
+	  border-top: 10px solid transparent;
+	  border-bottom: 10px solid transparent;
+	  cursor: pointer;
+	}
+
+	.arrow_right
+	{
+
+	  border-left: 10px solid hsl(203, 43%, 76%);
+	  margin-left: 430px;
+	}
+
+	.arrow_left
+	{
+
+	  border-right:10px solid hsl(203, 43%, 76%);
+	  float: left;
+	}
+
+	.correct_char, .lastwords
+	{
+		color: hsl(200, 80%, 53%);
+	}
+
+	#model_prediction_visualization table
+	{
+	    color: hsl(0, 0%, 42%);
+	    font-size: 16px;
+	    margin-top: 25px;
+
+	}
+
+	#model_prediction_visualization .normal_cell
+	{
+	    height: 40px;
+	    width: 127;
+	}
+
+	#model_prediction_visualization .number_cell
+	{
+	    width: 25px;
+	    font-weight: 600;
+	    color: #0000004d;
+	}
+
+	#model_prediction_visualization .predictor_picture
+	{
+		margin-left: 27;
+	}
+
+	#model_prediction_visualization .predictor_name
+	{
+		text-align: center;
+	    margin-bottom: 15px;
+	}
+}

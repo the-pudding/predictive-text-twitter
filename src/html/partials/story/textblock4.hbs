@@ -1,0 +1,19 @@
+<div class='textblock'>
+	<div class='textblock__prose'>
+		{{#each doc.textblock4-before}}
+		<p>{{{value}}}</p>
+		{{/each}}
+	</div>
+	<div class='textblock__bullets'>
+		<ul>
+			{{#each doc.textblock4-bullets}}
+			<li>{{{value}}}</li>
+			{{/each}}
+		</ul>
+	</div>
+	<div class='textblock__prose'>
+		{{#each doc.textblock4-after}}
+		<p>{{{value}}}</p>
+		{{/each}}
+	</div>
+</div>
