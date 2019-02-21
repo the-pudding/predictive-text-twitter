@@ -12,13 +12,14 @@
 
 	.visualization_section
 	{
-		padding: 30px;
+			padding: 30px;
 	    padding-top: 10px;
 	    padding-bottom: 10px;
 	}
 
 	.profile_picture
 	{
+		display: inline-block;
 		border-radius: 50%;
 		width: 100px;
 		margin: 10px;
@@ -156,7 +157,7 @@
 
 	#neighbours_progress_slider::-webkit-slider-runnable-track, #models_progress_slider::-webkit-slider-runnable-track
 	{
-		background-color: hsla(0,0%,0%,0.05);
+		background-color: hsla(0,0%,0%,0.1);
 		border-radius: 10px;
 		height: 10px;
 		margin-top:3px;
@@ -166,13 +167,13 @@
 	{
 	    -webkit-appearance: none;
 	    appearance: none;
-	    background-color: hsl(203, 43%, 76%);
+	    background-color: hsl(200, 80%, 53%);
 	    border: none;
 	    cursor: pointer;
 	    width: 20px;
 	    height: 20px;
 	    border-radius: 20px;
-	    margin-top:-4px;
+	    margin-top:-5px;
 	}
 
 	#neighbours_progress_slider:focus, #models_progress_slider:focus
@@ -259,3 +260,130 @@
 	    margin-bottom: 15px;
 	}
 }
+
+.visualization
+	border-top 2px solid
+	margin 2rem 1rem
+	width calc(100% - 2rem)
+	box-shadow 0 4px 8px 0 rgba(0, 0, 0, 0.1)
+
+.visualization_section
+	padding 1.5rem
+	&:nth-child(odd)
+		background-color $off-white
+
+.section_title
+	font-family $national
+	color $off-black
+	font-weight 600
+	margin 0 0 1rem 0
+
+.profile-wrapper
+	width 100%
+
+.profile_picture
+	width 24%
+	margin 0
+	opacity 0.25
+	&:hover
+		opacity 1
+
+.selected
+	opacity 1
+
+.tweet_select_area
+	width 100%
+
+	.tweet_select
+		font-family $national
+		margin 0 1rem 0 0
+		border-bottom none !important
+
+.slider_area
+	width 100%
+	position relative
+	height 2rem
+
+	.arrow_left
+		position absolute
+		border-right 10px solid hsla(0,0%,0%,0.25);
+		left 0
+		top 0
+		margin 0
+
+	.arrow_right
+		position absolute
+		border-left 10px solid hsla(0,0%,0%,0.25);
+		right 0
+		top 0
+		margin 0
+
+	#neighbours_progress_slider, #models_progress_slider
+		background-color hsl(0, 0%, 96%)
+		width calc(100% - 2rem)
+		position absolute
+		left 1rem
+		top 4%
+		float none
+		margin 0 auto
+
+.predictor_picture
+	opacity 1
+
+table
+	width 100%
+
+	tr
+		width 100%
+		height 4rem
+		padding-bottom 1rem
+
+		td
+			width 3rem
+
+			img
+				width 100% !important
+
+		.bar_column
+			width calc(100% - 4rem)
+			padding 0 0 0 1rem
+
+			.predictor_name
+				color $gray
+				font-family $national
+				set-type-size(root)
+
+			.bar
+				height 1.25rem
+				margin-right 0.25rem
+				background-color hsl(200, 80%, 53%)
+
+			.predictor_score
+				font-family $national
+				set-type-size(root)
+
+.predicted_tweet_percentage
+	width 100%
+	margin 0 auto
+	font-family $national
+	font-weight 600
+
+.percentage_explanation
+	width 100%
+	margin 0 auto 1.5rem auto
+	text-transform lowercase
+	color $gray
+	font-family $national
+	set-type-size(root)
+
+.normal_cell
+	width 25%
+	set-type-size(x-small)
+
+	.predictor_name
+		color $gray
+		font-family $national
+		set-type-size(x-small)
+
+.predicted_tweet
+	line-height 1.65

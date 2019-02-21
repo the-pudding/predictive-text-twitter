@@ -26,19 +26,32 @@
 	<main id='content'>
 
 		{{> story/intro }}
-		{{> story/nearest-neighbor }}
+		<div class='viz-wrapper'>{{> story/nearest-neighbor }}</div>
 		{{> story/textblock2 }}
-		{{> story/models }}
+		<div class='viz-wrapper'>{{> story/models }}</div>
 		{{> story/textblock3 }}
-		{{> story/eval }}
+		<div class='viz-wrapper'>{{> story/eval }}</div>
 		{{> story/textblock4 }}
-		{{> story/sociolect }}
+		<div class='viz-wrapper'>{{> story/sociolect }}</div>
 		{{> story/closing }}
 
 	</main>
 
 
 	<script src='{{basepath}}assets/scripts/d3.v5.8.0.min.js'></script>
+	<script src='assets/scripts/jquery.min.js'></script>
+	<script src="assets/scripts/example_tweets.js" type="text/javascript"></script>
+	<script src="assets/scripts/nearest_neighbours.js" type="text/javascript"></script>
+	<script src="assets/scripts/eval_scores_per_language_model.js" type="text/javascript"></script>
+	<script src="assets/scripts/sociolect_scores_per_language_model.js" type="text/javascript"></script>
+	<script src="assets/scripts/scores_per_tweet.js" type="text/javascript"></script>
+	<script src="assets/scripts/predictions_per_language_model.js" type="text/javascript"></script>
+
+	<script src="assets/scripts/neighbours_visualization.js" type="text/javascript"></script>
+	<script src="assets/scripts/models_visualization.js" type="text/javascript"></script>
+	<script src="assets/scripts/eval_visualization.js" type="text/javascript"></script>
+	<script src="assets/scripts/sociolect_visualization.js" type="text/javascript"></script>
+
 	<script src='bundle.js?version={{timestamp}}' async></script>
 	<script src='https://pudding.cool/assets/scripts/pudding-footer.v2.js' async></script>
 </body>
