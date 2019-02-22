@@ -26,13 +26,25 @@
 	<main id='content'>
 
 		{{> story/intro }}
-		<div class='viz-wrapper'>{{> story/nearest-neighbor }}</div>
+		<div class='viz-wrapper'>
+			<h3 class='viz-subhed'>k Nearest Neighbours</h3>
+			{{> story/nearest-neighbor }}
+		</div>
 		{{> story/textblock2 }}
-		<div class='viz-wrapper'>{{> story/models }}</div>
+		<div class='viz-wrapper'>
+			<h3 class='viz-subhed'>Language Model with Example Data</h3>
+			{{> story/models }}
+		</div>
 		{{> story/textblock3 }}
-		<div class='viz-wrapper'>{{> story/eval }}</div>
+		<div class='viz-wrapper'>
+			<h3 class='viz-subhed'>Language Model with User Data</h3>
+			{{> story/eval }}
+		</div>
 		{{> story/textblock4 }}
-		<div class='viz-wrapper'>{{> story/sociolect }}</div>
+		<div class='viz-wrapper'>
+			<h3 class='viz-subhed'>Language Model with 'Friend' Data</h3>
+			{{> story/sociolect }}
+		</div>
 		{{> story/closing }}
 
 	</main>

@@ -244,7 +244,7 @@
 
 	#model_prediction_visualization .number_cell
 	{
-	    width: 25px;
+	    width: 4%;
 	    font-weight: 600;
 	    color: #0000004d;
 	}
@@ -263,7 +263,7 @@
 
 .visualization
 	border-top 2px solid
-	margin 2rem 1rem
+	margin 1rem
 	width calc(100% - 2rem)
 	box-shadow 0 4px 8px 0 rgba(0, 0, 0, 0.1)
 
@@ -280,9 +280,14 @@
 
 .profile-wrapper
 	width 100%
+	display flex
+	justify-content space-between
+
+	div
+		width 24%
 
 .profile_picture
-	width 24%
+	width 100%
 	margin 0
 	opacity 0.25
 	&:hover
@@ -329,13 +334,14 @@
 
 .predictor_picture
 	opacity 1
+	filter none
 
 table
 	width 100%
 
 	tr
 		width 100%
-		height 4rem
+		height 3rem
 		padding-bottom 1rem
 
 		td
@@ -377,13 +383,59 @@ table
 	set-type-size(root)
 
 .normal_cell
-	width 25%
-	set-type-size(x-small)
+	width 24%
+	set-type-size(root)
+	+mq('bp-3')
+		set-type-size(medium)
+
+.predictor_name
+	color $gray
+	font-family $national
+	set-type-size(small)
+	padding-top 0.5rem
+
+.predicted_tweet, .predicted_text
+	line-height 1.25
+	font-family $national
+	set-type-size(large)
+
+.neighbours_section
+
+		table
+			font-family $national
+			td
+				width auto
+			.number
+				padding-left 0
+				width 1rem
+
+.table-images
+	width 100%
+	display flex
+	justify-content space-between
+
+.predictor-wrap
+	width 24%
+	display flex
+	flex-direction column
+
+	img
+		width 100%
+
+#model_prediction_visualization
+
+	.number-cell
+		width 4%
+
+	table
+		margin-top 1rem
+
+		td
+			font-family $national
+
+#eval_vis, #sociolect_vis
+	.model_select
+		margin-top 0.5rem
 
 	.predictor_name
-		color $gray
-		font-family $national
-		set-type-size(x-small)
-
-.predicted_tweet
-	line-height 1.65
+		padding-top 0

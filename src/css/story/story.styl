@@ -22,11 +22,6 @@
 	    font-size: 20px;
 	}
 
-	a, a:hover, a:visited
-	{
-		color: rgb(39, 167, 231);
-	}
-
 	#main
 	{
 		width: 800px;
@@ -124,26 +119,137 @@
 	}
 }
 
-.intro, .textblock
+.textblock__bullets
+	line-height 1.65
+
+	ul
+		list-style-type circle
+		list-style-position outside
+		padding 0 3rem
+
+		li
+			set-type-size(root)
+			+mq('bp-3')
+				set-type-size(medium)
+
+.intro__prose, .textblock
 	max-width $column-width
 	margin 0 auto
 	padding 0 1rem
 
+.intro__block
+	width 100%
+	height calc(100vh - 3rem)
+	background-color $off-black
+
 .intro__hed
+	height 22rem
+	margin 3rem 0 0 0
+	padding 2rem
+	color $off-white
+	line-height 0.65
+	text-align left
+	+mq('bp-4')
+		line-height 1.1
+		max-width 50rem
+	+mq('bp-3')
+		line-height 0.75
+		max-width 30rem
+		height 26rem
+
+.intro__typing
 	font-family $national
-	set-type-size(xxxxx-large)
-	height 20rem
+	set-type-size(xxxx-large)
 	letter-spacing 0
+	+mq('bp-4')
+		set-type-size(x6-large)
+	+mq('bp-3')
+		set-type-size(xxxxx-large)
+
+.intro
+	.blink
+		set-type-size(xxxx-large)
+		border-right 1px solid $off-white
+		margin-top 1rem
+		animation blink 1s infinite
+		+mq('bp-3')
+			set-type-size(xxxxx-large)
+		+mq('bp-4')
+			set-type-size(x6-large)
+
+.blink
+	border-right 1px solid $off-black
+	//padding-left 1rem
+	animation blink 1s infinite
+
+.stop
+	animation none
+	border-right none
+
+@keyframes blink {
+	0% {opacity: 0}
+	49%{opacity: 0}
+	50% {opacity: 1}
+}
+
+.intro__deets
+	display flex
+	flex-direction column
+	width 100%
+	padding 2rem
+	+mq('bp-3')
+		flex-direction row
+		justify-content space-between
+
+	.more-icon
+		width 3rem
+		padding-top 1rem
+		margin-left -0.5rem
+		animation bounce 1s infinite
+		+mq('bp-3')
+			padding-top 0.5rem
+
+		svg
+			width 100%
+			fill $gray-dark
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
 
 .intro__byline
+	width 100%
 	font-family $national
+	text-align left
+	margin 1rem 0 0 0
+	color $off-white
 
 	a
 		text-transform uppercase
+		border-bottom 1px solid rgb(39, 167, 231)
+		color rgb(39, 167, 231)
 
 .intro__time
 	font-family $national
+	color $off-white
 
 .viz-wrapper
 	max-width $column-width
-	margin 0 auto	
+	margin 0 auto
+
+.viz-subhed
+	margin 3rem 1rem 0 1rem
+	font-family $national
+	font-weight 600
+	set-type-size(x-large)
+	+mq('bp-3')
+		set-type-size(xx-large)
+
+.list-name
+	font-weight 600
+	font-family $national
