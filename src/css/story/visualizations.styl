@@ -333,8 +333,8 @@
 		margin 0 auto
 
 .predictor_picture
-	opacity 1
-	filter none
+	//opacity 1
+	//filter none
 
 table
 	width 100%
@@ -384,15 +384,23 @@ table
 
 .normal_cell
 	width 24%
-	set-type-size(root)
+	set-type-size(x-small)
+	+mq('bp-2')
+		set-type-size(small)
+	+mq('bp-2-5')
+		set-type-size(root)
 	+mq('bp-3')
 		set-type-size(medium)
 
 .predictor_name
 	color $gray
 	font-family $national
-	set-type-size(small)
 	padding-top 0.5rem
+	set-type-size(xxx-small)
+	+mq('bp-2')
+		set-type-size(xx-small)
+	+mq('bp-2-5')
+		set-type-size(small)
 
 .predicted_tweet, .predicted_text
 	line-height 1.25
@@ -439,3 +447,9 @@ table
 
 	.predictor_name
 		padding-top 0
+
+.table-images
+	.predictor-wrap
+		.predictor_picture
+			opacity 1
+			filter none

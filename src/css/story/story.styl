@@ -100,11 +100,6 @@
 		{
 			width: 70vw;
 		}
-
-		h1
-		{
-			font-size: 100px;
-		}
 	}
 
 	#first_character {
@@ -141,6 +136,7 @@
 	width 100%
 	height calc(100vh - 3rem)
 	background-color $off-black
+	position relative
 
 .intro__hed
 	height 22rem
@@ -149,33 +145,49 @@
 	color $off-white
 	line-height 0.65
 	text-align left
-	+mq('bp-4')
-		line-height 1.1
-		max-width 50rem
 	+mq('bp-3')
 		line-height 0.75
 		max-width 30rem
-		height 26rem
+		height 40rem
+	+mq('bp-4')
+		line-height 1.2
+		max-width 60rem
 
 .intro__typing
 	font-family $national
 	set-type-size(xxxx-large)
 	letter-spacing 0
-	+mq('bp-4')
-		set-type-size(x6-large)
-	+mq('bp-3')
+	line-height 0.8
+	+mq('bp-2-5')
 		set-type-size(xxxxx-large)
+		line-height 1.1
+	+mq('bp-3')
+		set-type-size(x6-large)
+		line-height 1.1
+	+mq('bp-4')
+		set-type-size(x7-large)
+	+mq('bp-5')
+		line-height 1.2
+		set-type-size(xSUPER-large)
 
 .intro
 	.blink
 		set-type-size(xxxx-large)
+		line-height 0.7
 		border-right 1px solid $off-white
 		margin-top 1rem
 		animation blink 1s infinite
-		+mq('bp-3')
+		+mq('bp-2-5')
 			set-type-size(xxxxx-large)
-		+mq('bp-4')
+			line-height 1
+		+mq('bp-3')
 			set-type-size(x6-large)
+			line-height 1
+		+mq('bp-4')
+			set-type-size(x7-large)
+		+mq('bp-5')
+			set-type-size(xSUPER-large)
+			line-height 1.1
 
 .blink
 	border-right 1px solid $off-black
@@ -197,8 +209,11 @@
 	flex-direction column
 	width 100%
 	padding 2rem
+	position absolute
+	bottom 0
 	+mq('bp-3')
 		flex-direction row
+		height 8rem
 		justify-content space-between
 
 	.more-icon
