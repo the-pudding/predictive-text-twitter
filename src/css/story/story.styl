@@ -138,62 +138,6 @@
 	background-color $off-black
 	position relative
 
-.intro__hed
-	height 22rem
-	margin 3rem 0 0 0
-	padding 2rem
-	color $off-white
-	line-height 0.65
-	text-align left
-	+mq('bp-3')
-		line-height 0.75
-		max-width 30rem
-		height 40rem
-	+mq('bp-4')
-		line-height 1.2
-		max-width 60rem
-
-.intro__typing
-	font-family $national
-	set-type-size(xxxx-large)
-	letter-spacing 0
-	line-height 0.8
-	+mq('bp-2-5')
-		set-type-size(xxxxx-large)
-		line-height 1.1
-	+mq('bp-3')
-		set-type-size(x6-large)
-		line-height 1.1
-	+mq('bp-4')
-		set-type-size(x7-large)
-	+mq('bp-5')
-		line-height 1.2
-		set-type-size(xSUPER-large)
-
-.intro
-	.blink
-		set-type-size(xxxx-large)
-		line-height 0.7
-		border-right 1px solid $off-white
-		margin-top 1rem
-		animation blink 1s infinite
-		+mq('bp-2-5')
-			set-type-size(xxxxx-large)
-			line-height 1
-		+mq('bp-3')
-			set-type-size(x6-large)
-			line-height 1
-		+mq('bp-4')
-			set-type-size(x7-large)
-		+mq('bp-5')
-			set-type-size(xSUPER-large)
-			line-height 1.1
-
-.blink
-	border-right 1px solid $off-black
-	//padding-left 1rem
-	animation blink 1s infinite
-
 .stop
 	animation none
 	border-right none
@@ -268,3 +212,8 @@
 .list-name
 	font-weight 600
 	font-family $national
+
+
+.blink
+	border-right 1px solid $off-black
+	animation blink 1s infinite

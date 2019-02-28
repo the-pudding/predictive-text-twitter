@@ -1,38 +1,36 @@
 /* global d3 */
 
+const $hed = d3.select('.intro__hed');
+
 function resize() {}
 
+function typeWriter(index) {
+	const $char = $hed.selectAll('.char');
+	$char.classed('is-visible', (d, i) => i <= index);
+	const $blink = $hed.selectAll('.blink');
+	$blink.classed('is-visible', (d, i) => i === index);
+	const next = index + 1;
+	if (next < $char.size()) d3.timeout(() => typeWriter(next), 100);
+	else $blink.classed('is-visible', false);
+}
+
 function init() {
-	const hed = d3.select('.intro__typing')
-			const txt= 'What text prediction teaches us about language'
+	const data = $hed.text().split('');
 
-	function typeWriter(progress) {
-		const txt_progress = Math.max(0, Math.min(txt.length + 1, Math.floor(progress * txt.length)))
+	const html = data
+		.map(
+			(d, i) =>
+				`<span class='char' data-index='${i}'>${d}</span><span data-index='${i}' class='blink'></span>`
+		)
+		.join('');
+	$hed.html(html);
+	$hed.classed('is-visible', true);
 
-		hed.text(txt.substring(0, txt_progress))
-	}
+	d3.timeout(() => typeWriter(0), 1000);
 
-	function delayTyping() {
-		let progress = 0
-		let interval = d3.interval(function() {
-			if (hed.text().length == txt.length) {
-				interval.stop();
-				d3.select('.blink')
-					.transition()
-						.delay(5000)
-						.style('animation', 'none')
-						.style('border-right', 'none')
-				return;
-			} else {
-				progress += 0.01
-				typeWriter(progress)
-			}
-		}, 50)
-	}
-
-	setTimeout(delayTyping, 1000);
-
-	window.addEventListener('scroll', function() { d3.select('.more-icon').style('display', 'none') });
+	window.addEventListener('scroll', () => {
+		d3.select('.more-icon').style('display', 'none');
+	});
 }
 
 export default { init, resize };
