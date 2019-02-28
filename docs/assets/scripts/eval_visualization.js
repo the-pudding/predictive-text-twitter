@@ -1,3 +1,6 @@
+const barWidth = d3.select('.bar_column')
+let width = barWidth.node().offsetWidth
+
 class EvalVisualization
 {
 	constructor()
@@ -77,7 +80,7 @@ class EvalVisualization
 		{
 			if (score_per_language_model.length > c)
 			{
-				$(this).css('width',bar_length_multiplier*score_per_language_model[c][1]+'px');
+				$(this).css('width',width*(score_per_language_model[c][1]*.01)+'px');
 				c++;
 			}
 		});

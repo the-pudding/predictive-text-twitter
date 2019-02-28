@@ -1,3 +1,6 @@
+const barWidthFriends = d3.select('.bar_column')
+let widthFriends = barWidthFriends.node().offsetWidth
+
 class SociolectVisualization
 {
 	constructor()
@@ -79,7 +82,7 @@ class SociolectVisualization
 		{
 			if (score_per_language_model.length > c)
 			{
-				$(this).css('width',bar_length_multiplier*score_per_language_model[c][1]+'px');
+				$(this).css('width',widthFriends*(score_per_language_model[c][1]*.01)+'px');
 				c++;
 			}
 		});
