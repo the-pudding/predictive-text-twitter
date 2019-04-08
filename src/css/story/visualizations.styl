@@ -239,14 +239,13 @@
 	#model_prediction_visualization .normal_cell
 	{
 	    height: 40px;
-	    width: 127;
 	}
 
 	#model_prediction_visualization .number_cell
 	{
 	    width: 4%;
 	    font-weight: 600;
-	    color: #0000004d;
+	    color: $gray-dark
 	}
 
 	#model_prediction_visualization .predictor_picture
@@ -263,7 +262,7 @@
 
 .embedded_tweet_area
 	min-height 200px
-	
+
 .visualization
 	border-top 2px solid
 	margin 1rem
@@ -287,7 +286,7 @@
 	justify-content space-between
 
 	div
-		width 24%
+		width 20%
 
 .profile_picture
 	width 100%
@@ -358,7 +357,7 @@ table
 			padding 0 0 0 1rem
 
 			.predictor_name
-				color $gray
+				color $gray-dark
 				font-family $national
 				set-type-size(root)
 
@@ -381,12 +380,11 @@ table
 	width 100%
 	margin 0 auto 1.5rem auto
 	text-transform lowercase
-	color $gray
+	color $gray-dark
 	font-family $national
 	set-type-size(root)
 
 .normal_cell
-	width 24%
 	set-type-size(x-small)
 	+mq('bp-2')
 		set-type-size(small)
@@ -396,7 +394,7 @@ table
 		set-type-size(medium)
 
 .predictor_name
-	color $gray
+	color $gray-dark
 	font-family $national
 	padding-top 0.5rem
 	set-type-size(xxx-small)
@@ -426,7 +424,7 @@ table
 	justify-content space-between
 
 .predictor-wrap
-	width 24%
+	width 20%
 	display flex
 	flex-direction column
 
@@ -456,3 +454,15 @@ table
 		.predictor_picture
 			opacity 1
 			filter none
+
+#model_prediction_visualization table
+	width 100%
+
+#prediction_barackobama_1
+	width 23%
+
+#prediction_jtimberlake_1
+	width 26%
+
+#prediction_kimkardashian_1
+	width 28%
