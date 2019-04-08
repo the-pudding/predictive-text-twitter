@@ -156,19 +156,16 @@
 .intro__deets
 	display flex
 	flex-direction column
+	align-content center
 	width 100%
-	padding 2rem
+	padding 2rem 2rem 1rem 2rem
 	position absolute
 	bottom 0
-	+mq('bp-3')
-		flex-direction row
-		height 8rem
-		justify-content space-between
 
 	.more-icon
 		width 3rem
 		padding-top 1rem
-		margin-left -0.5rem
+		margin 1rem auto 0 auto
 		animation bounce 1s infinite
 		+mq('bp-3')
 			padding-top 0.5rem
@@ -187,10 +184,9 @@
 }
 
 .intro__byline
-	width 100%
 	font-family $national
 	text-align left
-	margin 1rem 0 0 0
+	margin 1rem auto 0 auto
 	color $off-white
 
 	a

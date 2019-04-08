@@ -28,9 +28,9 @@ function init() {
 
 	d3.timeout(() => typeWriter(0), 1000);
 
-	window.addEventListener('scroll', () => {
-		d3.select('.more-icon').style('display', 'none');
-	});
+	// window.addEventListener('scroll', () => {
+	// 	d3.select('.more-icon').style('display', 'none');
+	// });
 }
 
 export default { init, resize };
