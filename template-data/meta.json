@@ -1,5 +1,5 @@
 {
-	"title": "What Text Prediction Teaches Us About Language",
+	"title": "How Smartphones Know What You’ll Type Next",
 	"description": "Exploring how text prediction really works.",
 	"url": "https://pudding.cool/2019/04/text-prediction/",
 	"keywords": "text, prediction",
@@ -7,12 +7,11 @@
 	"imgTwitter": "https://pudding.cool/2019/04/text-prediction/assets/social/social-twitter.jpg",
 	"author": {
 		"name": "Wessel Stoop",
-		"url": "http://wesselstoop.ruhosting.nl/"
+		"url": "https://pudding.cool/author/wessel-stoop"
 	},
 	"author2": {
 		"name": "Antal van den Bosch",
-		"url": "http://antalvandenbosch.ruhosting.nl/",
-		"twitterHandle": "@antalvdb"
+		"url": "https://pudding.cool/author/antal-van-den-bosch"
 	},
 	"analytics": "UA-90567923-1",
 	"lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis neque sit amet sollicitudin vehicula. Maecenas fringilla mi non lacus mattis elementum. Curabitur dignissim faucibus justo. Nulla facilisi. Duis ornare eleifend erat nec lacinia. Integer urna ligula, pellentesque vitae consectetur at, vehicula eget justo."
