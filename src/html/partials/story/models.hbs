@@ -1,7 +1,7 @@
 <div class="visualization" id="models_vis">
 
 	<div class="visualization_section">
-		<div class="section_title">Pick a Twitter user</div>
+		<div class="section_title">Pick a Twitter account</div>
 		<div class='profile-wrapper'>
 			<div><img class="user_select profile_picture selected" user="barackobama" src="assets/img/barackobama.jpg"></div>
 			<div><img class="user_select profile_picture" user="jtimberlake" src="assets/img/jtimberlake.jpg"></div>
@@ -25,7 +25,9 @@
 	<div class="visualization_section">
 		<div class="section_title">Slide back and forth</div>
 		<div class="slider_area">
-			<div class="arrow_left"></div><input type="range" min="1" max="10" value="2" class="slider" id="models_progress_slider"></input><div class="arrow_right"></div>
+			<div class="arrow_left"></div><input type="range" min="1" max="10" value="2" class="slider"
+				id="models_progress_slider"></input>
+			<div class="arrow_right"></div>
 		</div>
 		<p class="predicted_text">This is|</p>
 	</div>
@@ -34,17 +36,47 @@
 		<div class="section_title">Best predictions by language models</div>
 
 		<div class='table-images'>
-			<div class='predictor-wrap'><img class="user_select profile_picture predictor_picture" user="barackobama" src="assets/img/barackobama.jpg"><div class="predictor_name">@barackobama</div></div>
-			<div class='predictor-wrap'><img class="user_select profile_picture predictor_picture" user="jtimberlake" src="assets/img/jtimberlake.jpg"><div class="predictor_name">@jtimberlake</div></div>
-			<div class='predictor-wrap'><img class="user_select profile_picture predictor_picture" user="kimkardashian" src="assets/img/kimkardashian.jpg"><div class="predictor_name">@kimkardashian</div></div>
-			<div class='predictor-wrap'><img class="user_select profile_picture predictor_picture" user="ladygaga" src="assets/img/ladygaga.jpg"><div class="predictor_name">@ladygaga</div></div>
+			<div class='predictor-wrap'><img class="user_select profile_picture predictor_picture" user="barackobama"
+					src="assets/img/barackobama.jpg">
+				<div class="predictor_name">@barackobama</div>
+			</div>
+			<div class='predictor-wrap'><img class="user_select profile_picture predictor_picture" user="jtimberlake"
+					src="assets/img/jtimberlake.jpg">
+				<div class="predictor_name">@jtimberlake</div>
+			</div>
+			<div class='predictor-wrap'><img class="user_select profile_picture predictor_picture" user="kimkardashian"
+					src="assets/img/kimkardashian.jpg">
+				<div class="predictor_name">@kimkardashian</div>
+			</div>
+			<div class='predictor-wrap'><img class="user_select profile_picture predictor_picture" user="ladygaga"
+					src="assets/img/ladygaga.jpg">
+				<div class="predictor_name">@ladygaga</div>
+			</div>
 		</div>
 
 		<table>
 
-			<tr><td class="number_cell">1</td><td class="normal_cell" id="prediction_barackobama_1"></td><td class="normal_cell" id="prediction_jtimberlake_1"></td><td class="normal_cell" id="prediction_kimkardashian_1"></td><td class="normal_cell" id="prediction_ladygaga_1"></td></tr>
-			<tr><td class="number_cell">2</td><td class="normal_cell" id="prediction_barackobama_2"></td><td class="normal_cell" id="prediction_jtimberlake_2"></td><td class="normal_cell" id="prediction_kimkardashian_2"></td><td class="normal_cell" id="prediction_ladygaga_2"></td></tr>
-			<tr><td class="number_cell">3</td><td class="normal_cell" id="prediction_barackobama_3"></td><td class="normal_cell" id="prediction_jtimberlake_3"></td><td class="normal_cell" id="prediction_kimkardashian_3"></td><td class="normal_cell" id="prediction_ladygaga_3"></td></tr>
+			<tr>
+				<td class="number_cell">1</td>
+				<td class="normal_cell" id="prediction_barackobama_1"></td>
+				<td class="normal_cell" id="prediction_jtimberlake_1"></td>
+				<td class="normal_cell" id="prediction_kimkardashian_1"></td>
+				<td class="normal_cell" id="prediction_ladygaga_1"></td>
+			</tr>
+			<tr>
+				<td class="number_cell">2</td>
+				<td class="normal_cell" id="prediction_barackobama_2"></td>
+				<td class="normal_cell" id="prediction_jtimberlake_2"></td>
+				<td class="normal_cell" id="prediction_kimkardashian_2"></td>
+				<td class="normal_cell" id="prediction_ladygaga_2"></td>
+			</tr>
+			<tr>
+				<td class="number_cell">3</td>
+				<td class="normal_cell" id="prediction_barackobama_3"></td>
+				<td class="normal_cell" id="prediction_jtimberlake_3"></td>
+				<td class="normal_cell" id="prediction_kimkardashian_3"></td>
+				<td class="normal_cell" id="prediction_ladygaga_3"></td>
+			</tr>
 
 		</table>
 	</div>
